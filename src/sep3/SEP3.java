@@ -5,7 +5,7 @@
  */
 
 package sep3;
-
+import static sep3.IsPrime.IsPrime;
 /**
  *
  * @author Joshua
@@ -17,12 +17,20 @@ public class SEP3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        if ((n/2)%1==0){
-            
-        }
-        
-        
+         double x = 600851475143L;
+         int greatest=2;
+         int nuevo;
+         for (int n=2;n<=x;n++)
+             if (IsPrime(n)==true){
+                 if ((x/n)%1==0){
+                     nuevo = n;
+                     x = x/n;
+                     if(nuevo>greatest){
+                         greatest = nuevo;
+                     }
+                 }
+                n++; 
+             }
+         System.out.println(greatest);
+        }   
     }
-    
-}
