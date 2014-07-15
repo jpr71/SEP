@@ -16,13 +16,12 @@ public class SEP3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
          double x = 600851475143L;
          int greatest=2;
          int nuevo;
          for (int n=2;n<=x;n++)
              if (IsPrime(n)==true){
-                 if ((x/n)%1==0){
+                 if ((x/n)%1==0){//checks if n is a factor
                      nuevo = n;
                      x = x/n;
                      if(nuevo>greatest){
